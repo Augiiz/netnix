@@ -1,0 +1,19 @@
+﻿@model Movie
+@{
+
+}
+<div class="text-left">
+
+    <div>
+        <h4>@Model.name</h4>
+        <div>@Model.likes.like Likes | <a asp-action="Like" asp-route-id="@Model.id" />Did you like this movie?</a> </div>
+
+        <div><b>Release date: </b>@Model.releaseDate</div>
+        <div><b>Director: </b>@Model.director.name</div>
+        <div><b>Description: </b><br />@Model.description</div>
+        <div><img src="@Model.image" /></div>
+        <hr />
+    </div>
+
+</div>
+

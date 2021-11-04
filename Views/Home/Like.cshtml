@@ -1,0 +1,28 @@
+﻿@model Like
+@{
+
+}
+<div class="text-left">
+
+    <div>
+        <form asp-action="Like">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="movieId" class="control-label"></label>
+                <input asp-for="movieId" class="form-control" value="@Model.movieId" />
+                <span asp-validation-for="movieId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="username" class="control-label"></label>
+                <input asp-for="username" class="form-control" />
+                <span asp-validation-for="username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Like" class="btn btn-primary" />
+            </div>
+        </form>
+
+        <hr />
+    </div>
+
+</div>

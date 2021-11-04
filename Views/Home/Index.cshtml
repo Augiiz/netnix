@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Movies>;
+@{
+
+}
+<div class="text-left">
+    <h4>Upcoming movies</h4>
+    @foreach (var movie in Model)
+    {
+        @if (movie.releaseDate > DateTime.Now)
+        {
+
+            <div>
+                <a asp-action="Movie" asp-route-id="@movie.id"><h4>@movie.name</h4></a>
+                <div>@movie.releaseDate</div>
+                <div><a asp-action="Director" asp-route-id="@movie.director.id">@movie.director.name</a></div>
+                <hr />
+            </div>}
+    }
+</div>
